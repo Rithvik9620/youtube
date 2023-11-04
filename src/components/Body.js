@@ -1,14 +1,14 @@
 import React from "react";
 import SideBar from "./SideBar";
-import VideoContainer from "./VideoContainer";
 import MiniSideBar from "./MiniSideBar";
+import MainContainer from "./MainContainer";
 
 const Body = () => {
   return (
-    <div className="flex">
+    <div className="flex bg-black text-white">
       <SideBar />
       <MiniSideBar />
-      <VideoContainer />
+      <MainContainer />
     </div>
   );
 };
