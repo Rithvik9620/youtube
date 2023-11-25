@@ -1,14 +1,15 @@
 import React from "react";
 import SideBar from "./SideBar";
-import MiniSideBar from "./MiniSideBar";
-import MainContainer from "./MainContainer";
+import { Outlet } from "react-router-dom";
 
 const Body = () => {
   return (
-    <div className="flex bg-black text-white">
+    <div
+      className="flex bg-black
+     text-white"
+    >
       <SideBar />
-      <MiniSideBar />
-      <MainContainer />
+      <Outlet />
     </div>
   );
 };

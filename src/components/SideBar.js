@@ -27,6 +27,7 @@ import {
   FaClapperboard,
 } from "react-icons/fa6";
 import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 
 const SideBar = () => {
   const isDisplay = useSelector((store) => store.app.showSideBar);
@@ -35,13 +36,15 @@ const SideBar = () => {
 
   return (
     <div
-      className="bg-black text-white w-2/12 overflow-y-auto overscroll-y-contain scrollbar scrollbar-thumb-rounded-full scrollbar-track-black scrollbar-thumb-gray-400 scrollbar-h-1 scrollbar-w-1 scrollbar-none hover:scrollbar"
+      className="bg-black text-white w-2/12 overflow-y-auto overscroll-y-contain scrollbar scrollbar-thumb-rounded-full scrollbar-track-black scrollbar-thumb-gray-400 scrollbar-h-1 scrollbar-w-1 scrollbar-none hover:scrollbar fixed"
       style={{ height: "calc(100vh - 64px)" }}
     >
       <div className="px-4 pt-2">
         <div className="flex items-center cursor-pointer hover:bg-gray-700 px-2 rounded-md">
           <BsHouseDoorFill />
-          <p className="px-4 py-2">Home</p>
+          <Link to="/">
+            <p className="px-4 py-2">Home</p>
+          </Link>
         </div>
         <div className="flex items-center cursor-pointer hover:bg-gray-700 px-2 rounded-md">
           <BsFilm />

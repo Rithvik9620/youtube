@@ -44,7 +44,7 @@ const VideoCard = ({ info }) => {
   };
 
   return (
-    <div className="p-2 m-2 w-80 h-5">
+    <div className="p-2 m-2 w-[290px] max-h-80">
       <img alt="thumbnail" src={thumbnails.medium.url} className="rounded-lg" />
       <div className="flex my-4">
         <div className="w-2/12">
@@ -57,7 +57,9 @@ const VideoCard = ({ info }) => {
           )}
         </div>
         <div className="w-10/12 ml-1">
-          <div className="font-bold mb-1">{title}</div>
+          <div className="font-bold mb-1 max-h-12 line-clamp-2 pr-2">
+            {title}
+          </div>
           <div className="text-gray-400">
             <div>{channelTitle}</div>
             <div>{viewCount + " views"}</div>
