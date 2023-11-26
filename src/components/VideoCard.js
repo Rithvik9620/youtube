@@ -5,7 +5,6 @@ import {
 } from "../utils/constants";
 
 const VideoCard = ({ info }) => {
-  console.log("Got info " + info);
   const { snippet, statistics } = info;
   const { channelTitle, title, thumbnails, channelId } = snippet;
 
@@ -21,7 +20,6 @@ const VideoCard = ({ info }) => {
       quotient = Math.floor(quotient / 1000);
       setViewCount(quotient + "M");
     }
-    console.log(viewCount + " viewssssssss");
   };
 
   useEffect(() => {
@@ -37,9 +35,6 @@ const VideoCard = ({ info }) => {
         YOUTUBE_CHANNEL_API_SECOND_HALF
     );
     const json = await data.json();
-    console.log("MAIN " + json);
-    console.log(json);
-    console.log(json.items[0].snippet.thumbnails);
     setThumbnail(json.items[0].snippet.thumbnails);
   };
 
